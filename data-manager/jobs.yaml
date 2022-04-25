@@ -1,0 +1,59 @@
+---
+kind: DataManagerJobDefinition
+kind-version: '2021.1'
+
+name: Template Jobs
+collection: im-template-jobs
+repository-url: https://github.com/InformaticsMatters/data-manager-job-template
+repository-tag: '1.0.0'
+
+jobs:
+
+  echo:
+    name: Echo
+    description: >-
+      Echos a message and writes it to an output file
+    version: '1.0.0'
+    category: echo
+    keywords:
+    - echo
+    image:
+      name: informaticsmatters/job-template
+      tag: '1.0.0'
+      project-directory: /data
+      working-directory: /data
+    command: >-
+      /code/echo.py --msg '{{ msg }}' --out '{{ outputFile }}'
+    variables:
+      outputs:
+        type: object
+        properties:
+          outputFile:
+            title: Output file
+            mime-types:
+            - text/plain
+            creates: '{{ outputFile }}'
+            type: file
+        required:
+        - outputFile
+      options:
+        type: object
+        properties:
+          msg:
+            title: The message to echo
+            type: string
+        required:
+        - msg
+    # Tests
+    tests:
+      simple-execution:
+        options:
+          outputFile: echo.txt
+          msg: Hello, World!
+        checks:
+          exitCode: 0
+          outputs:
+          - name: echo.txt
+            checks:
+            - exists: true
+            - lineCount: 1
