@@ -13,6 +13,10 @@ WITH YOUR OWN README/JOB DOCUMENTATION
 [![publish-tag](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-tag.yaml/badge.svg)](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-tag.yaml)
 [![publish-stable](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-stable.yaml/badge.svg)](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-stable.yaml)
 
+![GitHub](https://img.shields.io/github/license/informaticsmatters/data-manager-job-template)
+
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/informaticsmatters/data-manager-job-template)
+
 A GitHub Template Repository that you can [use] for Data Manager Job
 implementations.
 
