@@ -8,6 +8,11 @@ AND REPLACE THE FOLLOWING
 WITH YOUR OWN README/JOB DOCUMENTATION
 ```
 
+
+[![build](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/build.yaml/badge.svg)](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/build.yaml)
+[![publish-tag](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-tag.yaml/badge.svg)](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-tag.yaml)
+[![publish-stable](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-stable.yaml/badge.svg)](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-stable.yaml)
+
 A GitHub Template Repository that you can [use] for Data Manager Job
 implementations.
 
