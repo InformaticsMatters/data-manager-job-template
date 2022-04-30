@@ -67,7 +67,7 @@ your job container image must compile for its architecture. The GitHub actions
 supplied in this template do that for you by employing the Docker [buildx]
 actions.
 
-YOu can test that your intended mage builds for the ARM64 processor using the
+You can test that your intended mage builds for the ARM64 processor using the
 notes in this public [buildx gist].
 
 ---
