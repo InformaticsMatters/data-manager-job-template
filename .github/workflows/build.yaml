@@ -55,12 +55,14 @@ jobs:
     # we pass to Jote for testing. This way the job-definitions
     # can (and should) use a formal tag rather than 'latest',
     # which is discouraged.
+    - name: Set REPOSITORY
+      run: echo ::set-env name=REPOSITORY::$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
         platforms: linux/amd64,linux/arm64
         push: true
-        tags: ${{ github.repository }}:${{ env.GITHUB_REF_SLUG }}
+        tags: ${{ env.REPOSITORY }}:${{ env.GITHUB_REF_SLUG }}
     - name: Test
       run: |
         jote --image-tag ${{ env.GITHUB_REF_SLUG }}
