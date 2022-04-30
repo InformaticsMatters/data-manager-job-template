@@ -1,10 +1,14 @@
 # Developer README
 
 ## Building
-The build takes place using GitHub Actions but a docker-compose file
-is included to simplify local builds. To build the image run: -
+The build takes place using GitHub Actions. We would like to support
+ARM64 (Apple M1) processors, so we use Docker's [buildx] to build the image: -
 
-    docker-compose build
+    docker buildx create --name mybuilder
+    docker buildx use mybuilder
+    docker buildx build . \
+        --platform linux/amd64,linux/arm64 --output type=image \
+        --tag informaticsmatters/data-manager-job-operator:latest
 
 ## Testing
 With the image built, use the Job tester utility: -
@@ -17,3 +21,5 @@ And, from the project root, run the tester: -
     jote
 
 ---
+
+[buildx]: https://docs.docker.com/buildx/working-with-buildx

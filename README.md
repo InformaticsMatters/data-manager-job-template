@@ -8,6 +8,7 @@ AND REPLACE THE FOLLOWING
 WITH YOUR OWN README/JOB DOCUMENTATION
 ```
 
+![Architecture](https://img.shields.io/badge/architecture-amd64%20%7C%20arm64-lightgrey)
 
 [![build](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/build.yaml/badge.svg)](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/build.yaml)
 [![publish-tag](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-tag.yaml/badge.svg)](https://github.com/InformaticsMatters/data-manager-job-template/actions/workflows/publish-tag.yaml)
@@ -52,7 +53,7 @@ This template contains a single working example.
 As well as replacing this README with your own you will want to
 adjust the following additional files: -
 
-1. The `docker-compose.yaml`, which creates an image using our image prefix
+1. `DEVELOPER-READEM.md` to name the repository you've forked to
 2. `data-manager/manifest.yaml`
 3. `data-manager/job.yaml`
 4. The GitHub Actions, which expects repository secrets `DOCKERHUB_USERNAME`
@@ -60,7 +61,18 @@ adjust the following additional files: -
 5. Adjust the `.gitignore` to satisfy your won tooling
 6. Add tests (and test data)
 
+## ARM64 (M1) processor support
+To assist in local execution on the ARM64 (Apple M1) series of processors
+your job container image must compile for its architecture. The GitHub actions
+supplied in this template do that for you by employing the Docker [buildx]
+actions.
+
+YOu can test that your intended mage builds for the ARM64 processor using the
+notes in this public [buildx gist].
+
 ---
 
+[buildx]: https://docs.docker.com/buildx/working-with-buildx
+[buildx gist]: https://gist.github.com/alanbchristie/14da3444f3fed6f0adcf877a82b56804.js
 [im-jote]: https://pypi.org/project/im-jote
 [use]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
