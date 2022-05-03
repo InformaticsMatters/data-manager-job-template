@@ -4,8 +4,6 @@ kind-version: '2021.1'
 
 name: Template Jobs
 collection: im-template-jobs
-repository-url: https://github.com/InformaticsMatters/data-manager-job-template
-repository-tag: '1.0.0'
 
 jobs:
 
