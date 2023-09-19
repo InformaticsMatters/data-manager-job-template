@@ -1,4 +1,4 @@
-FROM python:3.10.4-alpine3.15
+FROM python:3.11.5-alpine3.18
 
 ENV PYTHONUNBUFFERED=1
 ENV HOME=/code
