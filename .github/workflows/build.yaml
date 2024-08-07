@@ -26,6 +26,9 @@ on:
     tags-ignore:
     - '**'
 
+env:
+  POETRY_VERSION: 1.8.3
+
 jobs:
   build:
     runs-on: ubuntu-latest
