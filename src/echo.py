@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-"""Template echo utility.
-"""
+"""Template echo utility."""
+
 import argparse
 import os
 
@@ -10,17 +10,15 @@ from dm_job_utilities.dm_log import DmLog
 
 
 def run(msg: str, output_filename: str) -> None:
-    """Prints the supplied message.
-    """
+    """Prints the supplied message."""
     DmLog.emit_event(f"msg: {msg}")
 
-    with open(output_filename, 'wt') as output:
+    with open(output_filename, "wt", encoding="utf-8") as output:
         output.write(msg)
     os.chmod(output_filename, 0o664)
 
 
 if __name__ == "__main__":
-
     parser = argparse.ArgumentParser(description="Job Template Jobs")
     parser.add_argument("-m", "--msg", required=True, help="A message to print")
     parser.add_argument("-o", "--out", required=True, help="The output file")

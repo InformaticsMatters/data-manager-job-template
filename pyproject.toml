@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "data-manager-job-template"
+version = "1.0.3"
+description = "A GitHub Template Repository that you can use for Data Manager Job implementations."
+authors = [
+  "Alan Christie <achristie@informaticsmatters.com>",
+  "Tim Dudgeon <tdudgeon@informaticsmatters.com>",
+]
+license = "MIT license"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+im-data-manager-job-utilities = "^1"
+
+[tool.poetry.group.dev.dependencies]
+im-jote = "^0.10.7"
+pre-commit = "^3"
+pylint = "^3"
+ruff = "^0.5"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

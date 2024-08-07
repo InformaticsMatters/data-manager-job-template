@@ -33,14 +33,15 @@ From a fork you should be able to build and run the tests for the example
 Job that it defines, start with this, and you'll know you're starting with
 a working framework: -
 
-    python -m venv venv
-    source venv/bin/activate
-    python -m pip install -r build-requirements.txt
+    poetry shell
+    poetry install --no-root
+
+    pre-commit install -t commit-msg -t pre-commit
 
     docker-compose build
     jote
 
-    deactivate   
+    deactivate  
 
 > Note: You MUST provide at least one test for every Job your repository
 defines, and you MUST use our Job Tester ([im-jote]) to run those tests -

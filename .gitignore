@@ -2,3 +2,7 @@
 .idea
 data-manager/jote
 venv
+
+*~
+\#*#
+\#*
