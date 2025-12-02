@@ -11,10 +11,9 @@ ARM64 (Apple M1) processors, so we use Docker's [buildx] to build the image: -
         --tag informaticsmatters/data-manager-job-operator:latest
 
 ## Testing
-With the image built, use the Job tester utility: -
+With the image built, activate the environment: -
 
-    python -m pip install --upgrade pip
-    python -m pip install -r build-requirements.txt
+    poetry shell
 
 And, from the project root, run the tester: -
 

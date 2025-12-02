@@ -1,0 +1,13 @@
+[messages control]
+
+# Disable some distracting checks.
+# See http://pylint.pycqa.org/en/latest/user_guide/message-control.html
+#
+# C : Convention warnings
+# R : Refactoring warnings
+disable = C, F, R,
+          bare-except,
+          broad-exception-caught,
+          broad-exception-raised,
+          fixme,
+          import-error,
